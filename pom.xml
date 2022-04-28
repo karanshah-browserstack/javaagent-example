@@ -384,9 +384,9 @@
     </profiles>
 
     <scm>
-        <url>https://github.com/browserstack/browserstack-javaagent</url>
-        <connection>scm:git:https://github.com/browserstack/browserstack-javaagent.git</connection>
-        <developerConnection>scm:git:git@github.com:browserstack/browserstack-javaagent.git</developerConnection>
+        <url>https://github.com/karanshah-browserstack/javaagent-example</url>
+        <connection>scm:git:https://github.com/karanshah-browserstack/javaagent-example.git</connection>
+        <developerConnection>scm:git@github.com:karanshah-browserstack/javaagent-example.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
