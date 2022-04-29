@@ -447,8 +447,8 @@
 
     <scm>
         <url>https://github.com/karanshah-browserstack/javaagent-example</url>
-        <connection>scm:git:https://github.com/karanshah-browserstack/javaagent-example.git</connection>
-        <developerConnection>scm:git@github.com:karanshah-browserstack/javaagent-example.git</developerConnection>
+        <connection>scm:svn:https://github.com/karanshah-browserstack/javaagent-example</connection>
+        <developerConnection>scm:svn:https://github.com/karanshah-browserstack/javaagent-example</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
