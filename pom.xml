@@ -4,7 +4,7 @@
 
     <groupId>io.github.karanshah-browserstack</groupId>
     <artifactId>javaagent-example</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.5-SNAPSHOT</version>
     <name>javaagent-example</name>
     <packaging>jar</packaging>
     <description>JavaAgent for Browserstack Selenium Tests</description>
@@ -121,7 +121,7 @@
                     <version>2.4.0</version>
                     <configuration>
                         <includeDependency>false</includeDependency>
-                        <injar>${project.build.finalName}.${project.packaging}</injar>
+                        <injar>${project.build.finalName}-jar-with-dependencies.${project.packaging}</injar>
                         <outjar>${project.build.finalName}.${project.packaging}</outjar>
                         <libs>
                             <lib>${java.home}/lib/rt.jar</lib>
@@ -279,17 +279,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
-            <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
@@ -323,6 +312,17 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.6</version>
@@ -337,16 +337,21 @@
                 </executions>
             </plugin>
             <plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-release-plugin</artifactId>
-  <version>2.5.3</version>
-  <configuration>
-    <autoVersionSubmodules>true</autoVersionSubmodules>
-    <useReleaseProfile>false</useReleaseProfile>
-    <releaseProfiles>release</releaseProfiles>
-    <goals>deploy</goals>
-  </configuration>
-</plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <commitByProject>true</commitByProject>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <file>target/javaagent-example-${project.version}.jar</file>
+                    <useReleaseProfile>true</useReleaseProfile>
+                    <releaseProfiles>release</releaseProfiles>
+                    <goals>deploy</goals>
+                    <checkModificationExcludes>
+                        <checkModificationExclude>pom.xml</checkModificationExclude>
+                    </checkModificationExcludes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <profiles>
@@ -423,7 +428,7 @@
                     </execution>
                 </executions>
             </plugin>
-                        <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.6</version>
