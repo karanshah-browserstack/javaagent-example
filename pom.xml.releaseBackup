@@ -4,7 +4,7 @@
 
     <groupId>io.github.karanshah-browserstack</groupId>
     <artifactId>javaagent-example</artifactId>
-    <version>1.0.6</version>
+    <version>1.0.6-SNAPSHOT</version>
     <name>javaagent-example</name>
     <packaging>jar</packaging>
     <description>JavaAgent for Browserstack Selenium Tests</description>
@@ -341,8 +341,8 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
                 <configuration>
-                    <commitByProject>true</commitByProject>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <!-- <commitByProject>true</commitByProject> -->
+                    <!-- <autoVersionSubmodules>true</autoVersionSubmodules> -->
                     <file>target/javaagent-example-${project.version}.jar</file>
                     <useReleaseProfile>true</useReleaseProfile>
                     <releaseProfiles>release</releaseProfiles>
