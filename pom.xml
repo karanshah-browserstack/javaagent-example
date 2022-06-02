@@ -316,6 +316,7 @@
                     <!-- <commitByProject>true</commitByProject> -->
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <file>target/javaagent-example-${project.version}.jar</file>
+                    <arguments>-Dmaven.javadoc.skip=true -Dmaven.sources.skip=true</arguments>
                     <!-- <useReleaseProfile>true</useReleaseProfile> -->
                     <releaseProfiles>release</releaseProfiles>
                     <!-- <goals>deploy</goals> -->
