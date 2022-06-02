@@ -313,16 +313,15 @@
                 <version>2.5.3</version>
                 <configuration>
                     <tagNameFormat>v@{project.version}</tagNameFormat>
-                    <commitByProject>true</commitByProject>
+                    <!-- <commitByProject>true</commitByProject> -->
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <file>target/javaagent-example-${project.version}.jar</file>
-                    <useReleaseProfile>true</useReleaseProfile>
+                    <!-- <useReleaseProfile>true</useReleaseProfile> -->
                     <releaseProfiles>release</releaseProfiles>
-                    <goals>deploy</goals>
-                    <arguments>-Dmaven.javadoc.skip=true -Dmaven.sources.skip=true</arguments>
-                    <checkModificationExcludes>
+                    <!-- <goals>deploy</goals> -->
+                    <!-- <checkModificationExcludes>
                         <checkModificationExclude>pom.xml</checkModificationExclude>
-                    </checkModificationExcludes>
+                    </checkModificationExcludes> -->
                 </configuration>
             </plugin>
         </plugins>
