@@ -4,7 +4,7 @@
 
     <groupId>io.github.karanshah-browserstack</groupId>
     <artifactId>javaagent-example</artifactId>
-    <version>1.0.9</version>
+    <version>1.0.11-SNAPSHOT</version>
     <name>javaagent-example</name>
     <packaging>jar</packaging>
     <description>JavaAgent for Browserstack Selenium Tests</description>
@@ -425,7 +425,7 @@
         <url>https://github.com/karanshah-browserstack/javaagent-example.git</url>
         <connection>scm:git:git@github.com:karanshah-browserstack/javaagent-example.git</connection>
         <developerConnection>scm:git:git@github.com:karanshah-browserstack/javaagent-example.git</developerConnection>
-      <tag>v1.0.9</tag>
+        <tag>v1.0.9</tag>
   </scm>
 
 </project>
