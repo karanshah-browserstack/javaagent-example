@@ -449,9 +449,9 @@
     </profiles>
 
     <scm>
-        <url>https://github.com/karanshah-browserstack/javaagent-example/tags/javaagent-example-1.0.6</url>
-        <connection>scm:svn:https://github.com/karanshah-browserstack/javaagent-example/tags/javaagent-example-1.0.6</connection>
-        <developerConnection>scm:svn:https://github.com/karanshah-browserstack/javaagent-example/tags/javaagent-example-1.0.6</developerConnection>
+        <url>https://github.com/karanshah-browserstack/javaagent-example.git</url>
+        <connection>scm:git@github.com:karanshah-browserstack/javaagent-example.git</connection>
+        <developerConnection>scm:git@github.com:karanshah-browserstack/javaagent-example.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
