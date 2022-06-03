@@ -121,8 +121,12 @@
                     <version>2.4.0</version>
                     <configuration>
                         <includeDependency>false</includeDependency>
-                        <injar>${project.build.finalName}-jar-with-dependencies.${project.packaging}</injar>
+                        <injar>${project.build.finalName}.${project.packaging}</injar>
                         <outjar>${project.build.finalName}.${project.packaging}</outjar>
+                        <!-- <injar>${project.build.finalName}-jar-with-dependencies.${project.packaging}</injar>
+                        <outjar>${project.build.finalName}-jar-with-dependencies.${project.packaging}</outjar>
+                        <injar>${project.build.finalName}-sources.${project.packaging}</injar>
+                        <outjar>${project.build.finalName}-sources.${project.packaging}</outjar> -->
                         <libs>
                             <lib>${java.home}/lib/rt.jar</lib>
                             <lib>${java.home}/lib/jce.jar</lib>
@@ -256,9 +260,9 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <appendAssemblyId>true</appendAssemblyId>
+                    <appendAssemblyId>false</appendAssemblyId>
                     <archive>
-                        <index>true</index>
+                        <!-- <index>true</index> -->
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
@@ -279,6 +283,46 @@
                         <goals>
                             <goal>single</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <!-- <version>2.10.3</version> -->
+                <!-- <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration> -->
+                <executions>
+                    <execution>
+                        <id>empty-javadoc-jar</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                        <classifier>javadoc</classifier>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <!-- <version>2.10.3</version> -->
+                <!-- <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration> -->
+                <executions>
+                    <execution>
+                        <id>empty-sources-jar</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                        <classifier>sources</classifier>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -372,38 +416,6 @@
             <id>release</id>
             <build>
             <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.3</version>
-                <configuration>
-                    <additionalparam>-Xdoclint:none</additionalparam>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
-                <configuration>
-                    <attach>false</attach>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar-no-fork</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
