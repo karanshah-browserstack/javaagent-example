@@ -81,7 +81,6 @@
                 <version>2.5.3</version>
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <remoteTagging>false</remoteTagging>
                     <releaseProfiles>release</releaseProfiles>
                 </configuration>
             </plugin>
