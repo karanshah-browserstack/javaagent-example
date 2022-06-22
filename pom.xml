@@ -10,12 +10,12 @@
     <description>JavaAgent for Browserstack Selenium Tests</description>
     <url>https://www.browserstack.com</url>
 
-    <licenses>
+    <!-- <licenses>
         <license>
             <name>MIT</name>
             <url>https://opensource.org/licenses/MIT</url>
         </license>
-    </licenses>
+    </licenses> -->
 
     <developers>
         <developer>
@@ -54,6 +54,8 @@
         <maven.compiler.testSource>${maven.compiler.source}</maven.compiler.testSource>
         <maven.compiler.testTarget>${maven.compiler.testSource}</maven.compiler.testTarget>
         <version.proguard-base>7.1.1</version.proguard-base>
+        <license.licenseName>browserstack_license</license.licenseName>
+        <license.licenseResolver>${project.baseUri}src/license</license.licenseResolver>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
@@ -283,6 +285,27 @@
                         <goals>
                             <goal>single</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>2.0.0</version>
+                <configuration>
+                    <organizationName>BrowserStack</organizationName>
+                    <inceptionYear>2022</inceptionYear>
+                    <addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
+                    <processStartTag>========================LICENSE_START=================================</processStartTag>
+                    <processEndTag>=========================LICENSE_END==================================</processEndTag>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>first</id>
+                        <goals>
+                            <goal>update-file-header</goal>
+                        </goals>
+                        <phase>process-sources</phase>
                     </execution>
                 </executions>
             </plugin>
