@@ -4,7 +4,7 @@
 
     <groupId>io.github.karanshah-browserstack</groupId>
     <artifactId>browserstack-cucumber-archetype</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>maven-archetype</packaging>
     <description>BrowserStack Archetype for Cucumber TestNG</description>
     <url>https://www.browserstack.com</url>
@@ -113,7 +113,7 @@
         <url>https://github.com/karanshah-browserstack/javaagent-example.git</url>
         <connection>scm:git:git@github.com:karanshah-browserstack/javaagent-example.git</connection>
         <developerConnection>scm:git:git@github.com:karanshah-browserstack/javaagent-example.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>browserstack-cucumber-archetype-1.1</tag>
   </scm>
 
 </project>
