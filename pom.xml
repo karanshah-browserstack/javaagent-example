@@ -4,7 +4,7 @@
 
     <groupId>io.github.karanshah-browserstack</groupId>
     <artifactId>javaagent-example</artifactId>
-    <version>1.0.17-SNAPSHOT</version>
+    <version>1.0.11</version>
     <name>javaagent-example</name>
     <packaging>jar</packaging>
     <description>JavaAgent for Browserstack Selenium Tests</description>
@@ -48,7 +48,7 @@
         <browserstack.local.version>1.0.6</browserstack.local.version>
         <commons.lang3.version>3.11</commons.lang3.version>
         <yamlconfiguration.version>1.0.11</yamlconfiguration.version>
-        <project.build.finalName>browserstack-javaagent</project.build.finalName>
+        <project.build.finalName>javaagent-example</project.build.finalName>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <maven.compiler.testSource>${maven.compiler.source}</maven.compiler.testSource>
@@ -351,7 +351,7 @@
                     <tagNameFormat>v@{project.version}</tagNameFormat>
                     <!-- <commitByProject>true</commitByProject> -->
                     <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <file>target/javaagent-example-${project.version}.jar</file>
+                    <!-- <file>target/javaagent-example-${project.version}.jar</file> -->
                     <!-- <arguments>-Dmaven.javadoc.skip=true -Dmaven.sources.skip=true</arguments> -->
                     <!-- <useReleaseProfile>true</useReleaseProfile> -->
                     <releaseProfiles>release</releaseProfiles>
