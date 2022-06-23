@@ -10,12 +10,12 @@
     <description>JavaAgent for Browserstack Selenium Tests</description>
     <url>https://www.browserstack.com</url>
 
-    <!-- <licenses>
+    <licenses>
         <license>
             <name>MIT</name>
-            <url>https://opensource.org/licenses/MIT</url>
+            <!-- <url>https://opensource.org/licenses/MIT</url> -->
         </license>
-    </licenses> -->
+    </licenses>
 
     <developers>
         <developer>
