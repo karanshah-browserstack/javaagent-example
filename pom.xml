@@ -305,7 +305,14 @@
                         <goals>
                             <goal>update-file-header</goal>
                         </goals>
-                        <phase>process-sources</phase>
+                        <phase>pre-integration-test</phase>
+                    </execution>
+                    <execution>
+                        <id>second</id>
+                        <goals>
+                            <goal>update-project-license</goal>
+                        </goals>
+                        <!-- <phase>pre-integration-test</phase> -->
                     </execution>
                 </executions>
             </plugin>
