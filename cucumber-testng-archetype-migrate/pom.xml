@@ -5,7 +5,7 @@
     <groupId>io.github.karanshah-browserstack</groupId>
     <name>archetype-migrate</name>
     <artifactId>archetype-migrate</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
     <description>Archetype for Migrating Cucumber CLI tests to TestNG</description>
     <url>https://www.browserstack.com</url>
@@ -113,7 +113,7 @@
         <url>https://github.com/karanshah-browserstack/javaagent-example.git</url>
         <connection>scm:git:git@github.com:karanshah-browserstack/javaagent-example.git</connection>
         <developerConnection>scm:git:git@github.com:karanshah-browserstack/javaagent-example.git</developerConnection>
-    <tag>archetype-migrate-1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
 </project>
