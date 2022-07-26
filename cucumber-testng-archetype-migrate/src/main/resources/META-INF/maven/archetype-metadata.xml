@@ -1,0 +1,25 @@
+<archetype-descriptor
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+        name="cucumber-testng-archetype-migrate" partial="true">
+    <allowPartial>true</allowPartial>
+    <requiredProperties>
+        <requiredProperty key="BROWSERSTACK_USERNAME">
+            <defaultValue>YOUR_USERNAME</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="BROWSERSTACK_ACCESS_KEY">
+            <defaultValue>YOUR_ACCESS_KEY</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true">
+            <directory></directory>
+            <includes>
+                <include>browserstack.yml</include>
+                <include>testng.xml</include>
+                <include>src/test/java/BrowserStackCucumberTestNgRunner.java</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
