@@ -5,7 +5,7 @@
     <groupId>io.github.karanshah-browserstack</groupId>
     <name>archetype-migrate</name>
     <artifactId>archetype-migrate</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
     <description>Archetype for Migrating Cucumber CLI tests to TestNG</description>
     <url>https://www.browserstack.com</url>
